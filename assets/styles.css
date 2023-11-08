@@ -1,0 +1,195 @@
+
+/* @font-face{
+    font-family: 'sans-serif';
+    src:local(''),
+        url('/assets/fonts/Roboto-Bold.ttf') format('ttf'),
+        url('/assets/fonts/Roboto-Regular.ttf') format('ttf');
+} */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif; 
+}
+
+
+#success-message{
+    display: none;
+    width: 400px;
+    height: auto;
+    background: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.success-icon{
+    /* border: 1px solid #111; */
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.success-icon img{
+    width: 40px;
+}
+
+#success-message h1{
+    font-size: 35px;
+    padding-bottom: 20px;
+}
+
+#success-message p{
+    font-size: 16px;
+    padding: 10px 0;
+    /* border: 1px solid red; */
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+#success-message a#dismiss{
+    text-decoration: none;
+    /* width: 100%; */
+    margin-top: 20px;
+    padding: 10px;
+    background: hsl(235, 18%, 26%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 5px;
+}
+
+#success-message a#dismiss:hover{
+    background: hsl(4, 100%, 67%);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color .1s ease;
+}
+
+.container{
+    background: hsl(235, 18%, 26%);
+    font-size: 16px;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+#newsletter-card{
+    background: hsl(0, 0%, 100%);
+    width: 65%;
+    height: 500px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    gap: 60px;
+    /* display: none; */
+}
+
+.card-imgbox{
+    border-radius: inherit;
+    /* border: 1px solid red; */
+    width: 40%;
+    height: 100%;
+}
+
+.card-imgbox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.card-contents{
+    padding-left: 40px;
+}
+
+.card-contents h1{
+    font-size: 50px;
+    font-weight: 700;
+    padding: 50px 0 15px 0;
+}
+
+.card-contents p:nth-child(2){
+    padding: 20px 70px 20px 0;
+    font-weight: 400;
+}
+
+.card-contents p{
+    padding: 5px 0;
+    font-size: 16px;
+}
+
+.icon-list{
+    width: 10px;
+}
+
+.icon-list img{
+    width: 16px;
+    margin-right: 15px;
+}
+
+form{
+    margin-top: 20px;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+form input{
+    display: block;
+    padding: 10px;
+    width: 72%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid hsl(231, 7%, 60%);
+}
+
+form button{
+    width: 72%;
+    padding: 10px;
+    background: hsl(235, 18%, 26%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    border: none;
+}
+
+form button:hover{
+    background: hsl(4, 100%, 67%);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color .1s ease;
+}
+
+form label{
+    font-weight: 700;
+    margin-right: 50px;
+}
+
+.alert{
+    /* border-style: solid;
+    border-width: 1px; */
+    font-size: 0.8em;
+    
+}
+
+
+@media (max-width: 375px){
+    .container{
+        padding: 0;
+        width: 100%;
+        display: block;
+        height: 100vh;
+    }
+
+    #newsletter-card{
+        width: 100%;
+        height: 60%;
+        border-radius: 20px;
+        padding: 0;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .card-imgbox{
+        width: 100%;
+        height: 30%;
+    }
+}
